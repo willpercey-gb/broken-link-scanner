@@ -10,7 +10,7 @@ def call(String url) {
         sh 'virtualenv venv'
         sh 'source venv/bin/activate'
         sh 'pip install -r requirements.txt'
-        sh "python main.py ${url}"
+        sh "python3 main.py ${url}"
     } else if (isWindows()) {
         bat 'virtualenv venv'
         bat '.\\venv\\Scripts\\activate.bat && pip install -r requirements.txt'
